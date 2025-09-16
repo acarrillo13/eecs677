@@ -2,6 +2,7 @@ import re
 import sys
 import os
 
+#ran with py .\P2. File.ll
 def parser(filename):
     with open(filename, 'r') as f:
         content = f.read()
@@ -28,7 +29,7 @@ def get_blocks(body):
     for i in lines:
         if i.endswith(':'):
             if curr_block:
-                blocks[current_label] = curr_block
+                blocks[curr_label] = curr_block
             curr_label = i[:-1]
             curr_block = []
         else:
